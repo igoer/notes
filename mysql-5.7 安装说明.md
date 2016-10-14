@@ -4,6 +4,7 @@ mysql-5.7官方下载地址：http://dev.mysql.com/downloads/mysql/#downloads
 
 ##配置环境变量
 1、解压压缩文件如：D:\Program Files\mysql-5.7.10-winx64
+
 2、配置系统 path 环境变量为 D:\Program Files\mysql-5.7.10-winx64\bin
 
 PS：该步骤不是必须的，只是为了使用命令行的时候更加的方便，如果不配置环境变量则下面的所有命令都需要在D:\Program Files\mysql-5.7.10-winx64\bin目录下运行。
