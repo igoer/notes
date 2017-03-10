@@ -39,6 +39,13 @@ mysqld --install mysql
 net start mysql
 ```
 
+PS：我在windows server 2012上添加系统服务时成功，但是启动服务报如下异常
+```
+发生系统错误 2。
+系统找不到指定的文件。
+```
+解决办法需要在 mysql的bin目录下执行添加系统服务
+
 ##修改初始密码
 以管理员自身份打开CMD执行以下命令
 ```
