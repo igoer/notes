@@ -1,4 +1,4 @@
-# Tomcat server.xml 配置详解
+# tomcat server.xml 配置详解
 本次使用的配置文件基于 apache tomcat 8.0.18 版本，下面贴出直接从 tomcat 目录复制出的配置文件内容
 ```xml
 <?xml version='1.0' encoding='utf-8'?>
@@ -43,7 +43,7 @@
 
 由`org.apache.catalina.Server`接口来定义<Server>元素中可以包含一个或者多个`<Service>`元素,但`<Server>`元素不能作为任何其他元素的子元素。
 
-####Server 属性说明：
+#### Server 属性说明：
 - **className：**指定实现`org.apache.catalina.Server`接口的类,默认值为`org.apache.catalina.core.StandardServer`。
 
 - **port：**指定 Tomcat 服务器监听`shutdown`命令的端口，终止 Tomcat 服务运行时，必须在 Tomcat 服务器所在的机器上发出`Shutdown`命令，该属性是必须设定的。
