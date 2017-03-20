@@ -24,6 +24,7 @@ channel: 通道号，起始为1。例如通道1，则为ch1。
 subtype: 码流类型，主码流为main，辅码流为sub。
 
 **示例：**
+
 请求海康摄像机通道1的主码流，Url如下
 ```
 主码流：
@@ -55,6 +56,7 @@ channel: 通道号，起始为1。例如通道2，则为channel=2。
 subtype: 码流类型，主码流为0（即subtype=0），辅码流为1（即subtype=1）。
 
 **示例：**
+
 例如，请求某设备的通道2的辅码流，Url如下
 ```
 rtsp://admin:admin@10.12.4.84:554/cam/realmonitor?channel=2&subtype=1
@@ -82,6 +84,7 @@ stream: 码流类型，主码流为0（stream=0），辅码流为1（stream=1）
 real_stream--rtp-caching：该参数暂时不清楚，不是必须的参数。
 
 **示例：**
+
 例如，请求某设备的通道2的辅码流，Url如下
 ```
 rtsp://192.168.1.10:554/user=admin&password=&channel=1&stream=0.sdp
