@@ -1,4 +1,4 @@
-#Tomcat server.xml 配置详解
+# Tomcat server.xml 配置详解
 本次使用的配置文件基于 apache tomcat 8.0.18 版本，下面贴出直接从 tomcat 目录复制出的配置文件内容
 ```xml
 <?xml version='1.0' encoding='utf-8'?>
@@ -35,7 +35,7 @@
 	</Service>
 </Server>
 ```
-##Server
+## Server
 ```xml
 <Server port="8005" shutdown="SHUTDOWN">
 ```
@@ -50,18 +50,18 @@
 
 - **shutdown：**指定终止 Tomcat 服务器运行时，发给 Tomcat 服务器的`shutdown`监听端口的字符串，该属性是必须设定的。
 
-##Service
+## Service
 ```xml
 <Service name="Catalina">
 ```
 `<Service>`元素由`org.apache.catalina.Service`接口定义，它包含一个`<Engine>`元素，以及一个或多个`<Connector>`元素，这些`<Connector>`元素共享一个`<Engine>`元素，例如：在范例文件中配置了两个`<Service>`元素。
 
-####Service 属性说明：
+#### Service 属性说明：
 - **className：**指定实现`org.apache.catalina.Service`接口的类，默认值为`org.apache.catalina.core.StandardService`。
 
 - **name：**定义Service的名字。
 
-##Connector
+## Connector
 ```xml
 <Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" />
 <Connector port="8009" protocol="AJP/1.3" redirectPort="8443" />
@@ -75,7 +75,7 @@
 
 第二个`<Connector>`元素定义了一个 JK Connector，它通过`8009`端口接收由其他 HTTP 服务器（如`Apache`服务器）转发过来的客户请求。
 
-####Connector 属性说明
+#### Connector 属性说明
 
 所有的`<Connector>`元素都具有一些共同的属性,这些属性如下:
 ```xml
@@ -91,7 +91,7 @@
 
 **redirectPort：**指定转发端口，如果当前端口只支持`non-SSL`请求，在需要安全通信的场合，将把客户请求转发到基于`SSL`的`redirectPort`的端口。
 
-####HTTP Connector 类型属性说明
+#### HTTP Connector 类型属性说明
 
 - **calssName：**指定实现`org.apache.catalina.Connector`接口的类，默认值为`org.apache.coyote.tomcat5.CoyoteConnector`。
 
@@ -113,7 +113,7 @@
 
 - **connectionTimeout：**定义建立客户连接超时的时间，以毫秒为单位。如果设置为`-1`表示不限制建立客户连接的时间。
 
-###JK Connector 类型属性说明
+### JK Connector 类型属性说明
 - **className：**指定实现`org.apache.catalina.Connector`接口的类，默认值为`org.apache.coyote.tomact5.CoyoteCnnector`。
 
 - **enableLookups：**同上。
@@ -124,7 +124,7 @@
 
 - **protocol：**必须设定为`AJP/1.3`协议。
 
-##Engine
+## Engine
 ```xml
 <Engine name="Catalina" defaultHost="localhost">
 ```
@@ -138,13 +138,13 @@
 <Host>
 ```
 
-####Engine 属性说明
+#### Engine 属性说明
 
 - **className：**指定实现`org.apache.catalina.Service`接口的类，默认值为`org.apache.catalina.core.StandardService`。
 
 - **name：**定义 Service 的名字。
 
-##Host
+## Host
 ```xml
 <Host name="localhost"  appBase="webapps" unpackWARs="true" autoDeploy="true">
 ```
@@ -171,7 +171,7 @@
 
 - **name：**定义虚拟主机的名字。
 
-##Context
+## Context
 ```xml
 <Context path="/MyProject" docBase="MyProject" reloadable="true"/>
 ```
@@ -186,7 +186,7 @@
 <ResourceParams>
 ```
 
-####Context 属性说明
+#### Context 属性说明
 - **className：**指定实现`org.apache.catalina.Context`接口的类，默认值为`org.apache.catalina.core.StandardContext`。
 
 - **path：**指定访问该 Web 应用的 URL 入口。
@@ -199,7 +199,7 @@
 
 - **useNaming：**指定是否支持JNDI，默认为true。
 
-##使用 Context 实现通过 IP 直接访问项目
+## 使用 Context 实现通过 IP 直接访问项目
 正常情况下，在访问在Tomcat中部署的项目是 http://localhost:8080/demo 方式
 
 其中，IP，端口，项目名(Demo)都是必须的。
