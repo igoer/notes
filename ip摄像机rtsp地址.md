@@ -1,7 +1,8 @@
-#ip摄像机rtsp地址
+# ip摄像机rtsp地址
+
 本文主要记录当前市面上的网络摄像机rtsp流媒体地址的请求方式，将rtsp流媒体地址直接在VLC播放器中打开即可实时预览ip摄像机的实时画面。
 
-##hikvision（海康威视）
+## hikvision（海康威视）
 rtsp流媒体地址格式如下：
 ```
 rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream
@@ -27,7 +28,7 @@ rtsp://admin:12345@192.0.0.64/mpeg4/ch1/sub/av_stream
 rtsp://admin:12345@192.0.0.64/h264/ch1/sub/av_stream
 ```
 
-##dahua（大华）
+## dahua（大华）
 rtsp流媒体地址格式如下：
 ```
 rtsp://[username]:[password]@[ip]:[port]/cam/realmonitor?channel=[chan]&subtype=[type]
@@ -46,7 +47,7 @@ subtype: 码流类型，主码流为0（即subtype=0），辅码流为1（即sub
 rtsp://admin:admin@10.12.4.84:554/cam/realmonitor?channel=2&subtype=1
 ```
 
-##NV（NewVisioncctv）
+## NV（NewVisioncctv）
 rtsp流媒体地址格式如下：
 ```
 rtsp://[ip]:[port]/user=[username]&password=[password]&channel=[chan]&stream=[stream].sdp?real_stream--rtp-caching=100
