@@ -8,7 +8,7 @@ rtsp流媒体地址格式如下：
 rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream
 ```
 **说明：**
-username: 用户名。例如admin。
+username: 用户名。例如admin。 
 password: 密码。例如12345。
 ip: 为设备IP。例如 192.0.0.64。
 port: 端口号默认为554，若为默认可不填写。
