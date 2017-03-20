@@ -8,6 +8,7 @@ rtsp流媒体地址格式如下：
 rtsp://[username]:[password]@[ip]:[port]/[codec]/[channel]/[subtype]/av_stream
 ```
 **说明：**
+
 username: 用户名。例如admin。
 
 password: 密码。例如12345。
@@ -40,6 +41,7 @@ rtsp流媒体地址格式如下：
 rtsp://[username]:[password]@[ip]:[port]/cam/realmonitor?channel=[chan]&subtype=[type]
 ```
 **说明：**
+
 username: 用户名。例如admin。
 
 password: 密码。例如admin。
@@ -64,6 +66,7 @@ rtsp流媒体地址格式如下：
 rtsp://[ip]:[port]/user=[username]&password=[password]&channel=[chan]&stream=[stream].sdp?real_stream--rtp-caching=100
 ```
 **说明：**
+
 ip: 为设备IP。例如 10.7.8.122。
 
 port: 端口号默认为554，若为默认可不填写。
